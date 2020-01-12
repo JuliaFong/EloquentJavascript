@@ -179,32 +179,32 @@ console.log(Math.max(77, 666))
 console.log(Math.max(983459823, 8763476413768))
 8763476413768
 
-const learningMaths = Number(prompt("lets learn math, pick any number!", ""))
-alert("Your number is the square root of " +
-learningMaths * learningMaths)
+// const learningMaths = Number(prompt("lets learn math, pick any number!", ""))
+// alert("Your number is the square root of " +
+// learningMaths * learningMaths)
 
 
-const catAdopt = Number(prompt("Lets adopt a cat enter a number!", ""))
-alert("how many cats will you ACTUALLY adopt? " +
-catAdopt + catAdopt)
+// const catAdopt = Number(prompt("Lets adopt a cat enter a number!", ""))
+// alert("how many cats will you ACTUALLY adopt? " +
+// catAdopt + catAdopt)
 
 //CONDITIONAL EXECUTION: where we choose between two different routes
 //based on a Boolean value
 
-const fish = Number(prompt("Lets get a fish tank enter a number!", ""))
-if (!isNaN(fish))
-alert("For every fish, you must buy it a buddies! " + fish * fish)
-else
-alert("Who doesn't want a pet fish?")
+// const fish = Number(prompt("Lets get a fish tank enter a number!", ""))
+// if (!isNaN(fish))
+// alert("For every fish, you must buy it a buddies! " + fish * fish)
+// else
+// alert("Who doesn't want a pet fish?")
 
 
-let x = Number(prompt("Pick a number, any number!", "22"))
-if (x < 22)
-alert("too small")
-else if (x < 222)
-alert("medium")
-else
-alert("hugeeeeee")
+// let x = Number(prompt("Pick a number, any number!", "22"))
+// if (x < 22)
+// alert("too small")
+// else if (x < 222)
+// alert("medium")
+// else
+// alert("hugeeeeee")
 
 //WHILE AND DO LOOPS
 
@@ -232,10 +232,45 @@ console.log(xyz)
 //DO loop is a control structure similar to the while loop
 // DO loop always executes its body at least once
 
-do {
-    var favBook = prompt("whats your favorite book?")
-} while (!favBook)
-console.log(favBook)
+// do {
+//     var favBook = prompt("whats your favorite book?")
+// } while (!favBook)
+// console.log(favBook)
 
 // for (var yz = 0; yz <= 11; yz === yz + 4)
 // console.log(yz)
+
+
+for (var messages = 24; messages > 2; messages ++){
+    if (messages % 2 === 0)
+    break;
+}
+console.log(messages)
+//24
+
+// var message = 24
+// for (var message = 0; message <= 24; message === message + 2)
+//     message = message % 2
+// console.log(message)
+
+// Especially when looping, a program often needs to "update" 
+//a variable to hold a variable to hold a value
+//based on that variable's previous values
+
+//You may put any number of case labels inside the block 
+//opened by switch
+
+// a program is built out of statements
+//which cane sometimes contain more statements
+
+//EXERCISES
+// LOOPING A TRIANGLE 
+
+let x = ""
+
+for(let i=0; i < 8; i++){
+    x = "#" + x;
+    console.log(x)
+}
+
+//FizzBuzz
