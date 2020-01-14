@@ -274,3 +274,48 @@ for(let i=0; i < 8; i++){
 }
 
 //FizzBuzz
+
+for (let i=1; i <= 100; i++){
+    let x = ''
+    if (i % 3 === 0) x += 'Fizz'
+    if (i % 5 === 0) x += 'Buzz'
+
+    console.log(x || i)
+}
+
+//chessBoard
+
+let whiteBlock = "# # # #"
+let blackBlock = "# # # #"
+let i = 0
+
+for (i = 0; i <=8; i++){
+    if (i % 2 === 0){
+        console.log(whiteBlock)
+    } else {
+        console.log(blackBlock)
+    }
+}
+
+
+//CHAPTER 3 FUNCTIONS
+// a function is created by an expression 
+// that starts with the keywords functions
+//functions have a set of parameters and a body
+//contains statements that are to be executed
+//when the function is called
+
+let singing = function (){
+    console.log("do re mi")
+}
+
+singing() // do re mi
+
+let electric = function(light, dark){
+    let lightness = 4
+    for(let i = 0; i < dark; i++)
+    lightness += light
+    return lightness
+}
+console.log(electric(3, 9))
+//31
