@@ -319,3 +319,45 @@ let electric = function(light, dark){
 }
 console.log(electric(3, 9))
 //31
+
+let r = "vampire"
+
+let teeth = function(){
+    let vampire = "sanguine"
+}
+teeth()
+console.log(r) //vampire
+
+//functions can be created inside other functions,
+//producing several degrees of locality.
+
+//NESTED SCOPE
+
+//JavaScript distinguishes not just between
+//global and local variables.
+//Functions can be created inside other functions,
+//producing several degrees of locality
+
+
+var landscape = function () {
+    var result = "";
+    var flat = function ( size ) {
+    for ( var count = 0; count < size ; count ++)
+    result += " _ ";
+    };
+    var mountain = function ( size ) {
+    result += "/";
+    for ( var count = 0; count < size ; count ++)
+    result += " '";
+    result += "\\";
+    };
+    flat (3) ;
+    63
+    mountain (4) ;
+    flat (6) ;
+    mountain (1) ;
+    flat (1) ;
+    return result ;
+    };
+    console . log (landscape()) ;
+    // _  _  _ / ' ' ' '\ _  _  _  _  _  _ / '\ _ 
