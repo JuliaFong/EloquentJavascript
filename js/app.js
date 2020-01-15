@@ -361,3 +361,69 @@ var landscape = function () {
     };
     console . log (landscape()) ;
     // _  _  _ / ' ' ' '\ _  _  _  _  _  _ / '\ _ 
+
+    //variables declared outside of a function
+    //are called global because they are
+    //visible throughout the program
+
+    let g = "grass"
+
+    let g2 = function () {
+        let g = "yellow g2"
+    }
+    g2()
+    console.log(g) // grass
+
+    // By treating function-local variables as existing
+    // only within the function,
+    //the language makes it possible to read
+    //and understand functions as small universes
+    //without having to worry about all code at once.
+
+//DECLARATION NOTATION
+
+function rhombus(w){
+    return w * w
+}
+console.log("Rhombus says:", quadrilateral())
+
+function quadrilateral() {
+    return "We have four sides"
+}
+
+//function declarations are not part of
+//the regular top-to-bottom flow of control
+
+
+function hello(stranger) {
+    console.log("hiii " + stranger) 
+}
+hello("Kat")
+console.log("Adios")
+
+// function duck() {
+//     return quack()
+// }
+// function quack() {
+//     return duck()
+// }
+// console.log(duck() + " makes a sound")
+//^^BLOW THE STACK^^
+
+function powerChord(chord, extension) {
+    if (extension === undefined)
+    exponent = 4
+    let result = 2
+    for (let i =0; i <= extension; i++)
+    result *= chord
+    return result
+}
+
+console.log(powerChord(8))// 2
+
+console.log(powerChord(2, 2))//16
+
+console.log("R", 2, "D", 2) //starwars!
+
+// CLOSURE
+
