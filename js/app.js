@@ -558,3 +558,61 @@ function countChar(str, char) {
 console.log(beanCount(5))//0
 console.log(countChar(6))//0
 console.log(beanCount(88))//0 
+
+//DATA STRUCTURES: OBJECTS AND ARRAYS
+
+//numbers, booleans, and strings are the brick
+//that data structures are built from.
+
+//Data sets
+//Array: storing sequences of values.
+//written as a list of values
+//between square brackets, separated by commas
+
+const num = [3, 6, 9, 1, 2, 4]
+console.log(num[3])//1
+console.log(num[0])//3
+
+//notation for getting at the element inside an array
+//also uses square brackets
+
+//PROPERTIES
+//expressions access a property of some value
+
+//two most common ways to access properties
+//in JS are with a dot and with square brackets
+
+//When using dot, the part after the dot 
+//must be a valid cariable name
+// and it directly names the property
+
+//When using square brackets, the expression 
+//between the brackets is EVALUATED
+//to get the property name
+
+//METHODS
+//properties containing functions
+//are generally called methods
+//of the value they belong to.
+
+let cake = "Cake"
+console.log(typeof cake.toUpperCase)//function
+console.log(cake.toUpperCase())//CAKE
+
+let burger = []
+burger.push("Burger")
+burger.push("A", "foodie")
+console.log(burger)//(3) ["Burger", "A", "foodie"]
+console.log(burger.join(" "))//Burger A foodie
+console.log(burger.pop())//foodie
+console.log(burger)//(2) ["Burger", "A"]
+
+//the push method can be used to add
+//values to the end of an array
+
+//the pop method does the opposite
+//it removes the value at the end of the
+//string with the join method.
+//argument given to join determines
+//the text that is glued between the array's elements
+
