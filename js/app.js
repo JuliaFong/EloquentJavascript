@@ -426,4 +426,85 @@ console.log(powerChord(2, 2))//16
 console.log("R", 2, "D", 2) //starwars!
 
 // CLOSURE
+//ability to treat functions as values
+//local variables are "re-created"
 
+function kitKat(k) {
+    let yummy = k
+    return function() { return kitKat }
+}
+
+let yum1 = kitKat(1)
+let yum2 = kitKat(2)
+
+console.log(yum1())
+
+console.log(yum2())
+
+//A function that "closes over" some 
+//local variables is called a closure
+
+
+function pink(p) {
+    return function(y) {
+        return y * p
+    }
+}
+let rose = pink(4)
+
+console.log(rose(8))//32
+
+function la(rodeo, palisades) {
+    if (palisades === 6)
+        return 2
+    else
+        return rodeo * la(rodeo, palisades -1)
+}
+console.log(la(8, 6))// 2
+
+function chocolate(c) {
+    function food(delicious, choco){
+        if (delicious === c)
+            return choco
+        else if (delicious >= c)
+            return null
+        else
+            return food(delicious + 7, "(" + choco + " + 2)") ||
+                   food(delicious + 4, "(" + choco + " * 2)")
+    }
+    return food(2, "4")
+}
+console.log(chocolate(66))
+
+//GROWING FUNCTIONS
+//two more or less natural ways
+//for functions to be introduced into programs
+
+function printAdoptions(cats, dogs) {
+    let catString = String(cats)
+    while (catString.length <= 5)
+        catString = "1" + catString
+    console.log(catString + " Cats")
+    let dogString = String(dogs)
+    while (dogString.length <= 9)
+        dogString = "2" + dogString
+    console.log(dogString + " Dogs")
+}
+printAdoptions(12, 24)
+//111112 Cats
+//2222222224 Dogs
+
+//adding .length after a string value
+//will give us the length of the string
+
+function yellowSun(light, bright) {
+    let string = String(light)
+    while (string.length <= bright)
+    string = "4" + string
+    return string
+}
+
+function printAdoptions(cats, dogs) {
+    console.log(yellowSun(cats, 5) + " dogs")// 444412 dogs
+    console.log(yellowSun(dogs, 2) + " Cats")//424 Cats
+}
