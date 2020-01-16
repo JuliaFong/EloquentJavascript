@@ -508,3 +508,53 @@ function printAdoptions(cats, dogs) {
     console.log(yellowSun(cats, 5) + " dogs")// 444412 dogs
     console.log(yellowSun(dogs, 2) + " Cats")//424 Cats
 }
+
+//FUNCTIONS AND SIDE EFFECTS
+//A pure function is specific kind of value-producing
+//function that not only has no
+//side effects but also doesn't rely on side effects from
+//other code
+
+//A pure function always produces the same value
+
+
+//SUMMARY
+//Key aspect in understanding functions 
+//understanding local scopes
+//parameters and variables declared inside a function
+//are local to the function
+//re-created everytime the function is called
+
+//EXERCISES
+
+//RECURSION
+
+function isEven(number) {
+    if (number === 0) {
+        return true
+    } else {
+        return (-number % 2 === 0) ? true : false
+    }
+    return isEven(number - 2)
+}
+console.log(isEven(-1))//false
+console.log(isEven(50))//true
+console.log(isEven(75))//false
+
+function beanCount(str) {
+let count = 0
+for (let b = 0; b < str.length; b++){
+    if (str[b] === "B") {count++}
+    }
+    return count
+}
+function countChar(str, char) {
+    let count = 0
+    for (let b = 0; b < str.length; b++){
+        if (str[b] === character) {count++}
+    }
+    return count
+}
+console.log(beanCount(5))//0
+console.log(countChar(6))//0
+console.log(beanCount(88))//0 
