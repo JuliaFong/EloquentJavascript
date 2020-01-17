@@ -616,3 +616,69 @@ console.log(burger)//(2) ["Burger", "A"]
 //argument given to join determines
 //the text that is glued between the array's elements
 
+//values of the type of objects are arbitrary collections 
+//of properties and we can addo or remove these properties
+
+let sun = {
+    green: true,
+    outdoors: ["flower", "breeze", "light", "grass", "sunny"]
+}
+
+console.log(sun.flower)//undefined
+console.log(sun.grass)//undefined
+console.log(sun.sunny)//undefined
+
+//curly braces have two meaning in JavaScript
+
+let something = {vertical: 1, horizontal: 2}
+console.log(something.vertical)//1
+delete something.horizontal
+console.log(something.horizontal)//undefined
+console.log("horizontal" in something)//false
+console.log("vertical" in something)//true
+
+let novels = [
+    {genre: ["horror", "fantasy", "philosophy",
+             "adventure", "non-fiction"
+    ], tv: false},
+    {genre: ["religion", "hard-cover", "soft-cover", "illustration"],
+    tv: false},
+]
+
+console.log(novels[3])//undefined
+
+//Mutability
+
+//numbers, strings, and Booleans 
+//are all immutable
+
+let car1 = {value: 66}
+let car2 = car1
+let car = {value: 33}
+
+console.log(car1 === car2)//true
+console.log(car2 === car)//false
+car1.value = 25
+console.log(car2.value)//25
+console.log(car.value)//33
+
+let dearDiary = []
+function entry(date, write) {
+    dearDiary.push({
+        entry: entry,
+        date: write
+    })
+}
+entry(["write", "draw", "doodle", "angsty"], true)
+entry(["gibberish", "incomplete thought", ], false)
+console.log(dearDiary)
+
+
+//CORRELATION
+//measure of dependence between variables (in the statistic sense)
+//not the JS sense
+
+//for binary (boolean) variables, the phi 
+//coefficient is relatively easy to compute
+
+//COMPUTING CORRELATION
