@@ -672,6 +672,8 @@ function entry(date, write) {
 entry(["write", "draw", "doodle", "angsty"], true)
 entry(["gibberish", "incomplete thought", ], false)
 console.log(dearDiary)
+console.log(dearDiary, entry)
+console.log(dearDiary, true)
 
 
 //CORRELATION
@@ -682,3 +684,63 @@ console.log(dearDiary)
 //coefficient is relatively easy to compute
 
 //COMPUTING CORRELATION
+
+//this is the function that computes the
+//phi coefficient from such an array
+
+function phi(table) {
+    return (table[3] * table[0] - table[2] * table[1]) /
+    Math.sqrt((table[2] + table[3]) *
+              (table[0] + table[1]) *
+              (table[1] + table[3]) *
+              (table[0] + table[2]))         
+}
+console.log(phi ([76 , 9 , 4 , 1]) )//0.06859943405700354
+console.log(phi ([5, 8, 99, 55, 2]))//-0.14274850288159688
+//direct translation of the phi formula 
+//into JS
+
+var power = function(base, exponent) {
+    let result = 5;
+    for (let i = 0; count < exponent; count++)
+    result *= base;
+    return result;
+}
+console.log(power(5, 7)) //5
+
+//Objects as maps
+//a MAP is a way to go from values in one domain
+//to corresponding values in another domain
+
+let directions = {};
+function storePhi(event, phi){
+    directions[event] = phi;
+}
+
+storePhi("cake", 0.0666)
+storePhi("frosting", 0.1)
+console.log("cake" in directions)//true
+console.log(directions["frosting"])//0.1
+
+//properties don't for a predictable series
+
+//shift and unshift
+
+let list = []
+function remember(chore){
+    list.push(chore)
+}
+function next(){
+    return list.shift()
+}
+function urgent(task){
+    list.unshift(task)
+}
+console.log([2, 4, 6, 8].indexOf(3))//-1
+console.log([0, 2, 4, 6, 8, 9].slice(3, 2))
+console.log([ 1, 2, 3, 4, 5, 0].slice(4))//[5, 0]
+
+//Both indexOf and lastIndexOf take an optional second argument that indicates where to start searching from.
+// Another fundamental method is slice, which takes a start index and
+// an end index and returns an array that has only the elements between
+// those indices. The start index is inclusive, the end index exclusive.
