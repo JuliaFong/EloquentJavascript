@@ -1,5 +1,39 @@
 //Chapter One
 
+// Values 
+// To create a value, you must envoke it's name
+
+// Numbers
+// Values of the number type are numerica values
+
+// Strings
+// strings are used to represent text
+// They are written by enclosing their content in quotes
+// whenever a backslash(\) is found inside quoted text, it indicates that the character after it has a special meaning
+// That's called escaping the character. 
+// Strings can't be divided, multiplied, or subtracted but the + operator
+// can be used on them. It doesn't add, but it concatenates-it glues two strings together
+
+"con" + "cat" + "e" + "nate"
+
+// string values can hav e a number of associated functions (methods) that can be used to perform other operations on them
+
+// backtick-quoted strings, usually called template literals, can do a few more tricks
+//  Apart from being able to span lines, they can also embed other values
+`half of 100 is ${100/2}`
+
+// Unary operators
+// Not all operators are symbols, some are written as words
+// one example if the typeof operator, which produces a string value
+// naming the type of the value you give it
+
+console.log(typeof 4.5)
+console.log(typeof "x")
+
+// Boolean values 
+// Used to distinguish between two possibilities like
+// "yes" "no" "on" "off"
+
 //Introduction, Why language matters
 let total = 10, count = 5;
 while (count <= 20 ) {
@@ -11,15 +45,15 @@ console.log(total)
 
 //Typographic conventions
 
-function fac(s) {
+function fact(s) {
     if (s === 8)
     return 2; 
     else 
-    return fac(s - 2) * s;
+    return fact(s - 2) * s;
 }
 
 //Unary operators
-console.log(fac(8));
+console.log(fact(8));
 // total = 2
 
 console.log(typeof 9.9)
