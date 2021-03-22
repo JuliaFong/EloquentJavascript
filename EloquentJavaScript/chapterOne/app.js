@@ -34,6 +34,52 @@ console.log(typeof "x")
 // Used to distinguish between two possibilities like
 // "yes" "no" "on" "off"
 
+// Logical operators
+// Javascript supports three logical p[erators and, or, and not
+// These can be used to "reason about Booleans"
+
+console.log(true && false)
+// false
+console.log(true && true)
+// true
+
+// Not is written as an exclamation mark(!)
+// it's a unary operator that flips the value given to it
+// !true prodices false and !false gives true
+
+1 + 1 == 2 && 10 * 10 > 50
+console.log(true ? 1 : 2)
+// 1
+console.log(false ? 1 : 2)
+// 2
+
+
+// Empty Values
+
+// There are two special values, written null and undefined, that are used to denote the absence of a meaningful value
+
+// The difference in meaning between undefined and null is an accident of JS design, and it doesn't matter most of the time
+
+// AUTOMATIC TYPE CONVERSION
+
+// When an operator is applied to the "wrong" type of value,
+// Javascript will quietly comvert that value to the type it needs, using a set of rules
+// that often aren't what you want or expect. This is called type coercion
+
+// NaN = Not a Number
+
+// When you want to test whether a value has a real value instead of null or undefined,
+// you can compare it to null with the == (or !=) operator
+
+// Use three character comparison operators defensively to prevent unexpected type conversions from tripping you up.
+
+// The logical operators && and || habdle values of different types in a peculiar way
+
+// The || operat for example will return the value to its left when that
+// can be converted to true and will return the value to its right otherwise
+
+
+
 //Introduction, Why language matters
 let total = 10, count = 5;
 while (count <= 20 ) {
