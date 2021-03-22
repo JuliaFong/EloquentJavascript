@@ -1,11 +1,21 @@
 
 // ** CHAPTER 2 PROGRAM STRUCTURE ** //
 
+// EXPRESSIONS AND STATEMENTS
 //fragment of code that produces a 
 //value is called an expression
+// An expression between parenthese is also and expression
+// as is a binary operator applied to two expressions or a unary operator applied to one
+
+// If an expression corresponds to a sentence fragment, a JS statment corresponds
+// to a full sentence
+
+// The simplest kind of statement is an expression with a semicolon after it
+
+// BINDINGS
 
 //to catch and hold values, JS 
-//provides a thing called a variable (var -> const)
+//provides a thing called a binding or vairable (var -> const)
 
 const math = 66 % 11;
 console.log(math)
