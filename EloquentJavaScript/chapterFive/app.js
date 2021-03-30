@@ -36,3 +36,32 @@ function repeatLog(n) {
         console.log(i)
     }
 }
+
+function repeat(n, action) {
+    for(let i = 0; i < n; i++) {
+        action(i)
+    }
+}
+repeat(3, console.log)
+
+let labels= []
+repeat(5, i => {
+    labels.push(`Unit ${i + 1}`)
+})
+console.log(labels)
+
+// the body is now written as a function value, which is wrapped in the parenthese of the call to repeat
+// this is why it has to be closing brace and closing parenthesis
+
+// HIGHER ORDER FUNCTIONS
+
+// Functions that operate on other functions, either by taking them as
+// arguments or by returning them, are called higher order functions
+
+// Higer-order functions allow us to abstract over actions, not just values
+
+function greaterThan(n) {
+    return m => m > n
+}
+let greaterThan10 = greaterThan(10)
+console.log(greaterThan10(11))
