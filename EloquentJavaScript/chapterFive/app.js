@@ -65,3 +65,41 @@ function greaterThan(n) {
 }
 let greaterThan10 = greaterThan(10)
 console.log(greaterThan10(11))
+// =>true
+
+// we can have functions that change other functions
+
+function noisy(f) {
+    return (...args) => {
+        console,log("callibg with", args)
+        let result = f(...args)
+        console.log("called with", args, ", returned", result)
+        return result
+    }
+}
+noisy(Math.min)(3, 2, 1)
+
+// We can write functions that provide new types of control flow
+
+function useless(test, then) {
+    if (!test) then()
+}
+repeat(3, n => {
+    unless(n % 2 == 1, () => {
+        console.log(n, "is even")
+    })
+})
+
+// There's a buil in array method, forEach, that provides something like a for/of loop as a higher-order function
+
+["A", "B"].forEach(1, console.log(1))
+
+// {
+//     name: "Coptic",
+//     ranges: [[994, 1008], [11392, 11508], [11513, 11520]],
+//     direction: "ltr",
+//     year: -220,
+//     living: false,
+//     link: "https://en.wikipedia.org/wiki/Coptic_alphabet"
+// }
+
