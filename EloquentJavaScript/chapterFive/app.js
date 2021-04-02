@@ -103,3 +103,41 @@ repeat(3, n => {
 //     link: "https://en.wikipedia.org/wiki/Coptic_alphabet"
 // }
 
+
+// Ranges propert contains a array of Unicode character ranges
+// each of which is a two-element array containing a kower bound
+// and an upper bound
+
+// FILTERING ARRAYS
+
+function filter(array, test) {
+    let pased = []
+    for (let element of array) {
+        if (test(element)) {
+            passed.push(element)
+        }
+    }
+    return passed
+}
+console.log(filter(SCRIPTS, script, script.living))
+// ^^ this function is pure. it doesn't modify the array it is given
+
+// TRANSFORMING WITH MAP
+
+// Say we hae an array of objects representing scripts, produced by filtering the SCRIPTS array somehow
+
+// The map method transforms an array by applying a function to all of its elements and building
+// a new array from the returned values. The new array will have the same length
+// as the input array, but its content will have been mapped to a new form by the function
+
+function map(array, transfomr) {
+    let mapped = []
+    for (let element of array) {
+        mapped.push(transfrom(element))
+    }
+    return mapped
+}
+let rtlScripts = SCRIPTS.filter(s => s.direction == "rtl")
+console.log(map(rtlScripts, s => s.name))
+
+
